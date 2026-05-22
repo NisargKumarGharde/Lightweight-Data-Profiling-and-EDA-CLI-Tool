@@ -1,28 +1,27 @@
-# Project 1
-# CSV-Analyzer
-_A Python script created to help you get quick insights to your csv file._
+# Lightweight CSV Data Profiler
 
-Part of my college IIT Patna tied up with GUVI(HCL) internship.
-Under the part of Data Science, this is the Problem Statement no. 50
+<p align="left">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" height="48" alt="Python" title="Python" /> &nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg" height="48" alt="Pandas" title="Pandas" />
+</p>
 
-## Setup and Requirements:
-Use Python version (eg. Python 3.8+)
+## Project Overview
+This repository contains a command-line utility designed for rapid Exploratory Data Analysis (EDA) and automated data cleaning. It allows users to quickly ingest raw CSV datasets, generate structural insights, and output a sanitized version of the data for downstream machine learning or backend processing pipelines.
 
-Install _pandas_ [Required] (copy from here for ease: _pip install pandas_)
+## Features
+- **Automated Data Profiling:** Instantly generates file structure metadata, including data types, non-null counts, and unique value distributions per column.
+- **Data Sanitization:** Automatically detects and removes duplicate records, saving a cleaned output file without altering the source data.
+- **Robust Error Handling:** Built-in exception handling to gracefully manage missing files, empty datasets (`EmptyDataError`), and unexpected structural anomalies.
+- **CLI Interface:** A simple, interactive command-line interface for seamless local testing and data inspection.
 
-_I already imported_ pandas _in my python script for you to read in your respective enviornment._
+## Quick Start
 
-_I already imported_ os _in my python script for you to read in your respective enviornment._
-
-## A guide on how to run my code:
-1. It asks for an input, i.e your csv file
-2. Enter the path of CSV file (copy from folder)
-3. You will get the output as expected.
-4. Also the new CSV file will be saved in your default folder selected.
-
-#### NOTE: This is a basic csv file analyzer and only the required output will be out that were asked to do.
-
-## I hope the content above was able to provide you a glimpse of my project.
-### Sorry in advance if any part of my project caused an issue.
-
-# THANK YOU
+1. Ensure you have Python installed along with the Pandas library:
+   ```bash
+   pip install pandas
+   ```
+2. Run the analyzer script:
+   ```bash
+   python "CSV File Analyzer.py"
+   ```
+3. When prompted, provide the absolute path to your target CSV file. The script will output the insights to your terminal and generate a cleaned_data_[filename].csv in the exact same directory as your source file.

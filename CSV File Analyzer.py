@@ -1,5 +1,6 @@
 import pandas as pd
 import os
+import argparse
 
 def get_csv_insights(file_path):
     """
@@ -62,6 +63,16 @@ def get_csv_insights(file_path):
         print(f"An unexpected error occurred: {e}")
 
 if __name__ == "__main__":
-    print("Welcome to the CSV Quick Insights Tool!")
-    csv_file = input("Please enter the full path to your CSV file: ")
-    get_csv_insights(csv_file)
+    # Set up argument parser
+    parser = argparse.ArgumentParser(description="Lightweight CSV Data Profiler and Cleaner.")
+    parser.add_argument(
+        "-f", "--file", 
+        required=True, 
+        help="Absolute or relative path to the target CSV file"
+    )
+    
+    # Parse the arguments
+    args = parser.parse_args()
+    
+    print("Starting the CSV Quick Insights Tool...")
+    get_csv_insights(args.file)

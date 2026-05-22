@@ -1,0 +1,6 @@
+# Ignore generated cleaned data files
+cleaned_data_*.csv
+
+# Ignore Python cache
+__pycache__/
+*.pyc
